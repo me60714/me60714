@@ -16,8 +16,8 @@ public class LottoMAX {
 
         for(int i = 1; i <= set; i++) {                                 // Generate how many set of lotto
             int[] lotto = new int[MAX_NUMBER_OF_LOTTO];                 // building Lotto MAX array
-            for (int j = 0; j < MAX_NUMBER_OF_LOTTO; j++)               // Set the array value as 1 - 50
-                lotto[j] = j + 1;
+            for (int j = 1; j < MAX_NUMBER_OF_LOTTO; j++)               // Set the array value as 1 - 50
+                lotto[j] = j;
 
             int count = 0;                                              // To recode how many numbers been generated
             int[] result = new int[NUMBERS_OF_LOTTO];
@@ -29,7 +29,7 @@ public class LottoMAX {
                     continue;                                            // Therefore, re-run this loop again to generate a new random number
                 else {
                     result[count] = random;
-                    
+
                     lotto[random] = 0;                                   // Set the number to 0 in case of duplicate using
                     count++;
                 }
